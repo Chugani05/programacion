@@ -4,9 +4,9 @@
 
 
 def run(n: int) -> int:
-    num_digitos = len(str(abs(n)))
-    potencia_cinco = 5**num_digitos
-    result = n * potencia_cinco
+    num_digits = len(str(abs(n)))
+    powe_five = 5**num_digits
+    result = n * power_five
 
     return result
 
