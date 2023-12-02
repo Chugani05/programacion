@@ -8,15 +8,15 @@ def run(symbol: str) -> str:
     coma_pos = symbol.find(',')
 
     # Obtener el coeficiente y el exponente como subcadenas
-    coeficiente = int(symbol[:coma_pos])
-    exponente = int(symbol[coma_pos + 1 :])
+    coefficient = int(symbol[:coma_pos])
+    exponent = int(symbol[coma_pos + 1 :])
 
     # Calcular la integral
-    nuevo_exponente = exponente + 1
-    nuevo_coeficiente = coeficiente // nuevo_exponente
+    new_exponent = exponent + 1
+    new_coefficient = coefficient // new_exponent
 
     # Crear la expresión de la integral
-    integral = f"{nuevo_coeficiente}x^{nuevo_exponente}"
+    integral = f"{new_coefficient}x^{new_exponent}"
 
     return integral
 
