@@ -1,0 +1,15 @@
+# *************************
+# LA MULTIPLICACIÓN DE JACK
+# *************************
+
+
+def run(n: int) -> int:
+    num_digitos = len(str(abs(n)))
+    potencia_cinco = 5**num_digitos
+    result = n * potencia_cinco
+
+    return result
+
+
+if __name__ == '__main__':
+    run(3)
