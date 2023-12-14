@@ -4,8 +4,19 @@
 
 
 def run(text: str) -> bool:
-    # TU CÓDIGO AQUÍ
-    is_isogram = 'output'
+    ALPHABET = 'abcdefghijklmnñopqrstuvwxyz'
+    letter_find = []
+    text = text.lower()
+
+    is_isogram = True
+
+    for letters in text:
+        if letters in ALPHABET:
+            if letters not in letter_find:
+                letter_find.append(letters)
+                break
+        else:
+            is_isogram = False
 
     return is_isogram
 
