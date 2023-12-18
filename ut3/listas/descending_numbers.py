@@ -4,8 +4,9 @@
 
 
 def run(n: int) -> list:
-    # TU CÓDIGO AQUÍ
-    rev_nums = 'output'
+    rev_nums = []
+    for num in range(n, 0, -1):
+        rev_nums.append(num)
 
     return rev_nums
 

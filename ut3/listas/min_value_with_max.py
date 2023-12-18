@@ -1,13 +1,10 @@
 # ************
-# VALOR MÍNIMO
+# VALOR MÁXIMO
 # ************
 
 
 def run(values: list) -> int:
-    min_value = values[0]
-    for value in values[1:]:
-        if value < min_value:
-            min_value = value
+    min_value = -max([-num for num in values])
 
     return min_value
 

@@ -4,8 +4,13 @@
 
 
 def run(values: list) -> int:
-    # TU CÓDIGO AQUÍ
-    tsum = 'output'
+    tsum = 0
+    if values:
+        for num in values:
+            if num == min(values) or num == max(values):
+                continue
+            else:
+                tsum += num
 
     return tsum
 

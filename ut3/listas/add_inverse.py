@@ -4,8 +4,9 @@
 
 
 def run(numbers: list) -> int:
-    # TU CÓDIGO AQUÍ
-    add_inv = 'output'
+    add_inv = 0
+    for num in numbers:
+        add_inv += -num
 
     return add_inv
 
