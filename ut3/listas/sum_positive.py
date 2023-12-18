@@ -4,8 +4,10 @@
 
 
 def run(numbers: list) -> int:
-    # TU CÓDIGO AQUÍ
-    sum_positive = 'output'
+    sum_positive = 0
+    for num in numbers:
+        if num > 0:
+            sum_positive += num
 
     return sum_positive
 
