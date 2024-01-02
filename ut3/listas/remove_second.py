@@ -4,8 +4,10 @@
 
 
 def run(items: list) -> list:
-    # TU CÓDIGO AQUÍ
-    filter = 'output'
+    filter = []
+    for index, item in enumerate(items):
+        if index % 2 == 0:
+            filter.append(item)
 
     return filter
 

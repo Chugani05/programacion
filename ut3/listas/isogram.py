@@ -12,11 +12,11 @@ def run(text: str) -> bool:
 
     for letters in text:
         if letters in ALPHABET:
-            if letters not in letter_find:
-                letter_find.append(letters)
+            if letters in letter_find:
+                is_isogram = False
                 break
-        else:
-            is_isogram = False
+            else:
+                letter_find.append(letters)
 
     return is_isogram
 

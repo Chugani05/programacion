@@ -4,8 +4,7 @@
 
 
 def run(text: str) -> list:
-    # TU CÓDIGO AQUÍ
-    words_length = 'output'
+    words_length = [f'{word} {str(len(word))}' for word in text.split(' ')]
 
     return words_length
 

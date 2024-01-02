@@ -4,8 +4,14 @@
 
 
 def run(values: list) -> int:
-    # TU CÓDIGO AQUÍ
-    target = 'output'
+    target = None
+    if len(values) == 0:
+        target = None
+    else:
+        for index in range(1, len(values)):
+            if values[index] != values[index - 1] + 1:
+                target = values[index]
+                break
 
     return target
 

@@ -4,8 +4,11 @@
 
 
 def run(texts: list) -> list:
-    # TU CÓDIGO AQUÍ
-    chars = 'output'
+    chars = []
+
+    for words in texts:
+        for letters in words:
+            chars.append(letters)
 
     return chars
 

@@ -4,8 +4,10 @@
 
 
 def run(values: list) -> int:
-    # TU CÓDIGO AQUÍ
-    max_value = 'output'
+    max_value = values[0]
+    for value in values[1:]:
+        if value > max_value:
+            max_value = value
 
     return max_value
 

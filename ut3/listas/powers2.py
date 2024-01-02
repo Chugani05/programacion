@@ -4,8 +4,7 @@
 
 
 def run(num_powers: int) -> list:
-    # TU CÓDIGO AQUÍ
-    powers2 = 'output'
+    powers2 = [2**num_powers for num_powers in range(num_powers + 1)]
 
     return powers2
 

@@ -4,8 +4,12 @@
 
 
 def run(items: list) -> bool:
-    # TU CÓDIGO AQUÍ
-    all_same = 'output'
+    all_same = True
+    first_element = items[0]
+    for item in items[1:]:
+        if item != first_element:
+            all_same = False
+            break
 
     return all_same
 

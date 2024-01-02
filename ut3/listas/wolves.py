@@ -4,8 +4,10 @@
 
 
 def run(farm: list) -> str:
-    # TU CÓDIGO AQUÍ
-    msg = 'output'
+    if (sheep_in_danger_position := len(farm) - farm.index('lobo') - 1) == 0:
+        msg = 'No te quiero ver más por aquí, lobo'
+    else:
+        msg = f'Cuidado oveja {sheep_in_danger_position}, el lobo te va a comer'
 
     return msg
 

@@ -4,8 +4,14 @@
 
 
 def run(number: int) -> list:
-    # TU CÓDIGO AQUÍ
-    rev_digits = 'output'
+    rev_digits = []
+    str_number = str(number)
+
+    for num in str_number:
+        num = int(num)
+        rev_digits.append(num)
+
+    rev_digits = list(reversed(rev_digits))
 
     return rev_digits
 

@@ -4,8 +4,12 @@
 
 
 def run(values: list, ref_value: int) -> list:
-    # TU CÓDIGO AQUÍ
-    npartition = 'output'
+    npartition = [[], []]
+    for num in values:
+        if num < ref_value:
+            npartition[0].append(num)
+        elif num >= ref_value:
+            npartition[1].append(num)
 
     return npartition
 

@@ -4,8 +4,14 @@
 
 
 def run(input_date: str, base_year: int) -> str:
-    # TU CÓDIGO AQUÍ
-    output_date = 'output'
+    date = input_date.split('/')
+    day = date[0]
+    month = date[1]
+    year = int(date[2])
+
+    fullyear = base_year + year
+
+    output_date = str(f'{month}-{day}-{fullyear}')
 
     return output_date
 

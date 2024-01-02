@@ -4,8 +4,7 @@
 
 
 def run(text: str) -> str:
-    # TU CÓDIGO AQUÍ
-    reversing = 'output'
+    reversing = ' '.join(reversed(text.split(' '))).lower()
 
     return reversing
 

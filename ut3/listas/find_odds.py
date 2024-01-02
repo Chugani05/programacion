@@ -4,8 +4,10 @@
 
 
 def run(values: list) -> list:
-    # TU CÓDIGO AQUÍ
-    odds = 'output'
+    odds = []
+    for num in values:
+        if num % 2 == 1 and num not in odds:
+            odds.append(num)
 
     return odds
 

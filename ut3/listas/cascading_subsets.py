@@ -4,8 +4,10 @@
 
 
 def run(values: list, size: int) -> list:
-    # TU CÓDIGO AQUÍ
-    cascading = 'output'
+    cascading = []
+    for num in range(len(values) - size + 1):
+        sublist = values[num : num + size]
+        cascading.append(sublist)
 
     return cascading
 

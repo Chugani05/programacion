@@ -4,8 +4,15 @@
 
 
 def run(values: list, oper: str) -> bool:
-    # TU CÓDIGO AQUÍ
-    result = 'output'
+    match oper:
+        case 'and':
+            result = True
+            for value in values:
+                result = result and value
+        case 'or':
+            result = False
+            for value in values:
+                result = result or value
 
     return result
 

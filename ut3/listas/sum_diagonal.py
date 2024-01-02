@@ -4,8 +4,13 @@
 
 
 def run(matrix: list) -> int:
-    # TU CÓDIGO AQUÍ
-    sum_diagonal = 'output'
+    sum_diagonal = 0
+    length = len(matrix)
+
+    for row in range(length):
+        for colum in range(length):
+            if row == colum:
+                sum_diagonal += matrix[row][colum]
 
     return sum_diagonal
 

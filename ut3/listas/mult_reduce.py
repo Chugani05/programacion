@@ -4,8 +4,9 @@
 
 
 def run(numbers: list) -> int:
-    # TU CÓDIGO AQUÍ
-    rmult = 'output'
+    rmult = 1
+    for num in numbers:
+        rmult *= num
 
     return rmult
 

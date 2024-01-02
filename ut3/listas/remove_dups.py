@@ -4,8 +4,10 @@
 
 
 def run(nums_dups: list) -> list:
-    # TU CÓDIGO AQUÍ
-    nums_unique = 'output'
+    nums_unique = []
+    for num in nums_dups:
+        if num not in nums_unique:
+            nums_unique.append(num)
 
     return nums_unique
 

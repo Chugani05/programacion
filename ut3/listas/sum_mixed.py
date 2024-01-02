@@ -4,8 +4,7 @@
 
 
 def run(items: list) -> int:
-    # TU CÓDIGO AQUÍ
-    sum_items = 'output'
+    sum_items = sum(int(item) for item in items)
 
     return sum_items
 

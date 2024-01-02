@@ -4,8 +4,7 @@
 
 
 def run(x: int, n: int) -> list:
-    # TU CÓDIGO AQUÍ
-    multiples = 'output'
+    multiples = [num * x for num in range(1, n + 1)]
 
     return multiples
 

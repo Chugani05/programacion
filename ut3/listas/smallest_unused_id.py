@@ -4,8 +4,14 @@
 
 
 def run(ids: list) -> int:
-    # TU CÓDIGO AQUÍ
-    smallest_unused_id = 'output'
+    ids = sorted(ids)
+    smallest_unused_id = 1
+
+    for id in ids:
+        if smallest_unused_id == id:
+            smallest_unused_id += 1
+        else:
+            break
 
     return smallest_unused_id
 

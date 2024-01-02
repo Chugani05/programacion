@@ -5,7 +5,13 @@
 
 def run(values: list) -> tuple:
     # TU CÓDIGO AQUÍ
-    max_value = min_value = 'output'
+    max_value = values[0]
+    min_value = values[0]
+    for value in values[1:]:
+        if value < min_value:
+            min_value = value
+        elif value > max_value:
+            max_value = value
 
     return max_value, min_value
 

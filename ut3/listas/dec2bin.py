@@ -4,8 +4,11 @@
 
 
 def run(num: int) -> str:
-    # TU CÓDIGO AQUÍ
-    to_bin = 'output'
+    result = []
+    while num > 0:
+        result.append(str(num % 2))
+        num //= 2
+    to_bin = "".join(result[::-1])
 
     return to_bin
 
