@@ -4,12 +4,16 @@
 
 
 def run(A: list, B: list) -> list:
-    for rowA_index in range(len(A)):
-        for rowB_index in range(len(B[0])):
-            for rowAB_index in range(len(B)):
-                P[rowA_index][rowB_index] += A[rowA_index][rowAB_index] * B[rowAB_index][rowB_index]
-    else:
+    if len(A[0]) != len(B):
         P = None
+    else:
+        P = [[0 for _ in range(len(B[0]))] for _ in range(len(A))]
+        for rowA_index in range(len(A)):
+            for rowB_index in range(len(B[0])):
+                for rowAB_index in range(len(B)):
+                    P[rowA_index][rowB_index] += (
+                        A[rowA_index][rowAB_index] * B[rowAB_index][rowB_index]
+                    )
 
     return P
 

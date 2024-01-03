@@ -4,8 +4,7 @@
 
 
 def run(xmin: int, xmax: int) -> list:
-    # TU CÓDIGO AQUÍ
-    values = 'output'
+    values = [3 * x + 2 for x in range(xmin, xmax + 1)]
 
     return values
 
