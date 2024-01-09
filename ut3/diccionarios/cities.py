@@ -4,12 +4,15 @@
 
 
 def run(cinfo: str) -> dict:
-    a = cinfo.split(';')
-    b = str(a).split(':')
-
     cities = {}
-    for cinfo in 
-    cities[cinfo] = 
+
+    split_in_par = cinfo.split(';')
+
+    for split_all in split_in_par:
+        city, population = split_all.split(':')
+        population = int(population.replace('_', ''))
+
+        cities[city] = population
 
     return cities
 
