@@ -4,8 +4,9 @@
 
 
 def run(items: dict) -> dict:
-    # TU CÓDIGO AQUÍ
-    fitems = 'output'
+    key = list(items.keys())
+    cleaning_key = 
+    fitems = 
 
     return fitems
 

@@ -4,19 +4,8 @@
 
 
 def run(marks: dict) -> tuple:
-    passed = {}
-    failed = {}
-    
-#    passed = {}
-#    failed = {}
-#    for name, mark in marks.items():
-#        if mark >= 5:
-#            passed[name.upper()] = mark
-#        else:
-#            failed[name.lower()] = mark
-
-
-
+    passed = {name.upper(): mark for name, mark in marks.items() if mark >= 5}
+    failed = {name.lower(): mark for name, mark in marks.items() if mark < 5}
 
     return passed, failed
 
