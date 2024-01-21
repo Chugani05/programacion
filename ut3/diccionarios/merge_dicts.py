@@ -4,8 +4,13 @@
 
 
 def run(d1: dict, d2: dict) -> dict:
-    # TU CÓDIGO AQUÍ
-    merged = 'output'
+    merged = {}
+
+    for key, value in d1.items():
+        merged[key] = value
+
+    for key, value in d2.items():
+        merged[key] = value
 
     return merged
 

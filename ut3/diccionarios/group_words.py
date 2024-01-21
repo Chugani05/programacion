@@ -6,9 +6,13 @@
 def run(words: list) -> dict:
     group_words = {}
 
-    # sacar la primera letra
-    first_word = words[0]
-    first_letter = first_word[0
+    for word in words:
+        initial_letter = word[0].lower()
+
+        if initial_letter in group_words:
+            group_words[initial_letter].append(word)
+        else:
+            group_words[initial_letter] = [word]
 
     return group_words
 

@@ -4,8 +4,13 @@
 
 
 def run(pdata: dict) -> dict:
-    # TU CÓDIGO AQUÍ
-    avg_data = 'output'
+    total_population = sum(pdata.values())
+
+    relative_percentage = {
+        city: (population / total_population) * 100 for city, population in pdata.items()
+    }
+
+    avg_data = {city: round(porcentage, 3) for city, porcentage in relative_percentage.items()}
 
     return avg_data
 
