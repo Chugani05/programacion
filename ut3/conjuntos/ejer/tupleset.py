@@ -5,8 +5,8 @@
 
 def run(input: tuple) -> set:
     element = {}
-    if 
     
+
     output = 'output'
 
     return output
