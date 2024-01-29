@@ -4,8 +4,9 @@
 
 
 def run(input: tuple) -> set:
-    element = {}
-    
+    element1 = {}
+    element2 = {}
+
 
     output = 'output'
 
