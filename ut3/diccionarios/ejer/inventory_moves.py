@@ -4,8 +4,21 @@
 
 
 def run(imoves: str) -> dict:
-    # TU CÓDIGO AQUÍ
-    inventory = 'output'
+    inventory = {}
+
+    # Dividir la cadena de texto en movimientos individuales
+    moves = imoves.split(',')
+
+    # Procesar cada movimiento
+    for move in moves:
+        # Extraer el artículo y la cantidad del movimiento
+        item, quantity = move[0], int(move[1:])
+
+        # Actualizar el inventario
+        if item in inventory:
+            inventory[item] += quantity
+        else:
+            inventory[item] = quantity
 
     return inventory
 

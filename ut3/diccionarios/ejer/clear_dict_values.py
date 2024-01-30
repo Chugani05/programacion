@@ -4,8 +4,7 @@
 
 
 def run(items: dict) -> dict:
-    # TU CÓDIGO AQUÍ
-    citems = 'output'
+    citems = {key: [] for key in items}
 
     return citems
 

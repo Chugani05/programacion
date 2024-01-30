@@ -4,11 +4,7 @@
 
 
 def run(items: dict) -> dict:
-    # keys = list(items.keys())
-    # cleaning_keys = [key.strip() for key in keys]
-    # fitems = {cleaning_key: items[key] for cleaning_key, key in zip(cleaning_keys, keys)}
-
-    fitems = {key.strip(): value for key, value in items.items()}
+    fitems = {key.replace(' ', ''): value for key, value in items.items()}
 
     return fitems
 
