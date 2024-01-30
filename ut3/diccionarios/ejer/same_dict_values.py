@@ -4,8 +4,17 @@
 
 
 def run(items: dict) -> bool:
-    # TU CÓDIGO AQUÍ
-    all_same = 'output'
+    # Si el diccionario está vacío, todos sus valores son iguales (True)
+    if not items:
+        all_same = True
+    else:
+        # Seleccionar el primer valor del diccionario
+        first_value = items[next(iter(items))]
+
+        # Iterar sobre los valores del diccionario y comparar con el primer valor
+        for value in items.values():
+            if value != first_value:
+                all_same = False
 
     return all_same
 
