@@ -11,7 +11,6 @@ def run(input: tuple) -> set:
     for pair in input:
         # Agregar los primeros valores al primer conjunto
         element1.add(pair[0])
-
         # Agregar los segundos valores al segundo conjunto
         element2.add(pair[1])
 
