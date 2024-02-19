@@ -19,7 +19,7 @@ def run(datafile: Path) -> list:
                     diccionario[clave] = False
                 elif valor.isdigit():
                     diccionario[clave] = int(valor)
-                else:
+                else:........
                     diccionario[clave] = valor if valor != '' else None
             data.append(diccionario)
     return data
