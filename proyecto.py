@@ -65,7 +65,7 @@ a4 = []
 a3 = []
 b3 = []
 a2 = []
-warships = ['5A','4A','3A','3B','2A']
+warships = ['5A', '4A', '3A', '3B', '2A']
 
 
 game_board = [[UNEXPLORED for _ in range(10)] for _ in range(10)]
@@ -88,7 +88,9 @@ while game:
                     a5.append(player_coordinate)
                     if a5_counter == 5:
                         for touched_ship in a5:
-                            game_board[int(touched_ship[1:]) - 1][LETTERS.index(touched_ship[0].upper())] = SUNKEN
+                            game_board[int(touched_ship[1:]) - 1][
+                                LETTERS.index(touched_ship[0].upper())
+                            ] = SUNKEN
                         points += 4 * 5
                         warships.remove("5A")
                         TOTAL_SHIPS -= 1
@@ -100,7 +102,9 @@ while game:
                     a4.append(player_coordinate)
                     if a4_counter == 4:
                         for touched_ship in a4:
-                            game_board[int(touched_ship[1:]) - 1][LETTERS.index(touched_ship[0].upper())] = SUNKEN
+                            game_board[int(touched_ship[1:]) - 1][
+                                LETTERS.index(touched_ship[0].upper())
+                            ] = SUNKEN
                         points += 4 * 4
                         warships.remove("4A")
                         TOTAL_SHIPS -= 1
@@ -112,7 +116,9 @@ while game:
                     a3.append(player_coordinate)
                     if a3_counter == 3:
                         for touched_ship in a3:
-                            game_board[int(touched_ship[1:]) - 1][LETTERS.index(touched_ship[0].upper())] = SUNKEN
+                            game_board[int(touched_ship[1:]) - 1][
+                                LETTERS.index(touched_ship[0].upper())
+                            ] = SUNKEN
                         points += 4 * 3
                         warships.remove("3A")
                         TOTAL_SHIPS -= 1
@@ -124,7 +130,9 @@ while game:
                     b3.append(player_coordinate)
                     if b3_counter == 3:
                         for touched_ship in b3:
-                            game_board[int(touched_ship[1:]) - 1][LETTERS.index(touched_ship[0].upper())] = SUNKEN
+                            game_board[int(touched_ship[1:]) - 1][
+                                LETTERS.index(touched_ship[0].upper())
+                            ] = SUNKEN
                         points += 4 * 3
                         warships.remove("3B")
                         TOTAL_SHIPS -= 1
@@ -136,7 +144,9 @@ while game:
                     a2.append(player_coordinate)
                     if a2_counter == 2:
                         for touched_ship in a2:
-                            game_board[int(touched_ship[1:]) - 1][LETTERS.index(touched_ship[0].upper())] = SUNKEN
+                            game_board[int(touched_ship[1:]) - 1][
+                                LETTERS.index(touched_ship[0].upper())
+                            ] = SUNKEN
                         points += 4 * 2
                         warships.remove("2A")
                         TOTAL_SHIPS -= 1
@@ -150,7 +160,7 @@ while game:
                         points = 0
         else:
             notship = f"Ya has disparado a la casilla {player_coordinate}"
-        
+
         if TOTAL_SHIPS == 0:
             print(f"Juego terminado, tu puntuación es {points} y tardaste {turn} turnos")
             game = False
@@ -159,5 +169,7 @@ while game:
             row_string = " ".join(game_board[row])
             print(f"{LETTERS[row]}  {row_string}")
         print(notship)
-        print(f"Tu puntuación actual es: {points}, llevas {turn} rondas y quedan {len(warships)} barcos")
+        print(
+            f"Tu puntuación actual es: {points}, llevas {turn} rondas y quedan {len(warships)} barcos"
+        )
         turn += 1
