@@ -6,22 +6,23 @@ from pathlib import Path
 
 def run(datafile: Path) -> list:
     data = []
-    with open(datafile) as f:
-        lines = f.readlines()
-        column_names = lines[0].strip().split(',')
-        for line in lines[1:]:
+    with open(datafile, 'r') as f:
+        lines = f.readline().strip().split(',')
+        for line in f:
             values = line.strip().split(',')
-            diccionario = {}
-            for clave, valor in zip(column_names, values):
-                if valor.lower() == 'true':
-                    diccionario[clave] = True
-                elif valor.lower() == 'false':
-                    diccionario[clave] = False
-                elif valor.isdigit():
-                    diccionario[clave] = int(valor)
-                else:........
-                    diccionario[clave] = valor if valor != '' else None
-            data.append(diccionario)
+            row = {}
+            for key, value in zip(lines, values):
+                if value.lower() == 'true':
+                    row[key] = True
+                elif value.lower() == 'false':
+                    row[key] = False
+                elif value.isdigit():
+                    row[key] = int(value)
+                elif value == '':
+                    row[key] = None
+                else:
+                    row[key] = value
+            data.append(row)
     return data
 
 

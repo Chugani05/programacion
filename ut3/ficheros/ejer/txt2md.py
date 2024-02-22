@@ -7,7 +7,6 @@ from pathlib import Path
 
 def run(text_path: Path) -> bool:
     md_path = 'data/txt2md/outline.md'
-    # TU CÓDIGO AQUÍ
 
     return filecmp.cmp(md_path, 'data/txt2md/.expected', shallow=False)
 
